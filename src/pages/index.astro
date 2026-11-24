@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-import WaxSeal from '../components/WaxSeal.astro';
 import { site, intro, flowers, workshops, shop, garden } from '../data/content';
 ---
 <Base>
@@ -19,7 +18,6 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
 
 
   <section class="band band--intro" id="about">
-  <svg class="bigb" viewBox="30 10 1140 1420" aria-hidden="true"><use href="#cb"/></svg>
   <div class="intro wrap">
     <div class="intro__grid">
       <div>
@@ -28,7 +26,6 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
       </div>
       <figure class="intro__photo">
         <img src={`/img/${intro.photo.src}`} alt={intro.photo.alt} loading="lazy">
-        <WaxSeal class="seal-on-photo seal-on-photo--bl" />
       </figure>
     </div>
   </div>
@@ -56,8 +53,7 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
     </div>
   </section>
 
-  <section class="workshops band" id="workshops">
-    <svg class="bigb bigb--left" viewBox="30 10 1140 1420" aria-hidden="true"><use href="#cb"/></svg>
+  <section class="workshops" id="workshops">
     <div class="wrap">
       <div class="head">
         <div>
@@ -67,7 +63,7 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
         <p>{workshops.text}</p>
       </div>
       <div class="ws">
-        <div class="ws__photo"><img src={`/img/${workshops.photo.src}`} alt={workshops.photo.alt} loading="lazy"><WaxSeal class="seal-on-photo seal-on-photo--tr" /></div>
+        <div class="ws__photo"><img src={`/img/${workshops.photo.src}`} alt={workshops.photo.alt} loading="lazy"></div>
         <div>
           <div class="ws__list">
             {workshops.items.map((w) => (
@@ -102,7 +98,9 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
     </div>
   </section>
 
-  <section class="bags wrap" id="shop">
+  <section class="band band--shop" id="shop">
+    <svg class="bigb bigb--shop" viewBox="30 10 1140 1420" aria-hidden="true"><use href="#cb"/></svg>
+    <div class="bags wrap">
     <div class="shop-soon">
       <div>
         <div class="eyebrow">{shop.eyebrow}</div>
@@ -112,6 +110,7 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
         <p>{shop.text}</p>
         <p style="margin-top:20px"><a class="btn" href={site.instagram} target="_blank" rel="noopener">Follow on Instagram ↗</a></p>
       </div>
+    </div>
     </div>
   </section>
 

@@ -218,14 +218,25 @@ h2 em,.foot h2 em,.workshops h2 em{color:inherit}
 .foot__seal{color:var(--cream)}
 h2 em,.intro__lead em,.accent{font-family:inherit}
 
-/* ---------- The B as a graphic + the wax seal ---------- */
+/* ---------- The B as a quiet graphic (only where there is empty space) ---------- */
 .band{position:relative;overflow:hidden;isolation:isolate}
-.band > .wrap,.band > .intro{position:relative;z-index:1}
-.bigb{position:absolute;z-index:0;height:104%;width:auto;aspect-ratio:1140/1420;top:-10%;right:-10%;fill:var(--sage);opacity:.22;pointer-events:none}
-.bigb--left{right:auto;left:-18%;top:-8%;height:120%;fill:var(--forest);opacity:.12}
-@media (max-width:760px){.bigb{height:70%;top:auto;bottom:-6%;right:-30%}.bigb--left{height:60%;left:-35%;top:-4%}}
-.intro__photo,.ws__photo{position:relative}
-.seal-on-photo{position:absolute;width:clamp(84px,9vw,120px);height:auto;aspect-ratio:1}
-.seal-on-photo--bl{left:-26px;bottom:-22px;transform:rotate(-12deg)}
-.seal-on-photo--tr{right:-22px;top:-24px;transform:rotate(9deg)}
-@media (max-width:760px){.seal-on-photo--bl{left:-8px}.seal-on-photo--tr{right:-6px}}
+.band > .wrap{position:relative;z-index:1}
+.bigb{position:absolute;z-index:0;width:auto;aspect-ratio:1140/1420;pointer-events:none}
+.bigb--shop{height:150%;top:-25%;right:-6%;fill:var(--sage);opacity:.18}
+.bigb--foot{height:135%;bottom:-45%;right:-4%;fill:var(--cream);opacity:.06}
+@media (max-width:760px){.bigb--shop{height:90%;top:auto;bottom:-20%;right:-28%}.bigb--foot{height:70%;bottom:-25%;right:-25%}}
+
+/* Bouquets: always four in a row; on phones the row scrolls sideways */
+.cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:980px){.cards{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:640px){
+  .cards{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1 * var(--gut)) calc(-1 * var(--gutr));padding-inline:var(--gut) var(--gutr);scrollbar-width:none}
+  .cards::-webkit-scrollbar{display:none}
+  .card{scroll-snap-align:start}
+}
+.band--shop .shop-soon{grid-template-columns:minmax(0,1fr);max-width:min(560px,55%);border-top:0;padding-top:0;gap:20px}
+.band--shop{padding-block:clamp(48px,8vw,110px)}
+.band--shop .bags{padding-block:0}
+.bigb--shop{height:125%;top:-12%;right:6%;opacity:.28}
+@media (max-width:760px){.band--shop .shop-soon{max-width:none}.bigb--shop{height:80%;top:auto;bottom:-14%;right:-22%;opacity:.2}}
+@media (max-width:980px){.card__meta{flex-direction:column;gap:2px}}
