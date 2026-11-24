@@ -1,0 +1,79 @@
+---
+import '@fontsource-variable/fraunces/full.css';
+import '@fontsource-variable/fraunces/full-italic.css';
+import '@fontsource-variable/inter';
+import '@fontsource/jost/500.css';
+import '@fontsource/caveat/700.css';
+import '../styles/global.css';
+import MonogramDefs from '../components/MonogramDefs.astro';
+import { site } from '../data/content';
+
+interface Props { title?: string; description?: string; solidNav?: boolean }
+const { title, description = site.description, solidNav = false } = Astro.props;
+const fullTitle = title ? `${title} · Casa Bloom` : 'Casa Bloom · City garden flowers, 8002 Zürich';
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const ogImage = Astro.site ? new URL('/img/og.jpg', Astro.site).href : '/img/og.jpg';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  {canonical && <link rel="canonical" href={canonical}>}
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F6EFE2">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <MonogramDefs />
+  <header class:list={['nav', { 'is-solid': solidNav, 'always-solid': solidNav }]} id="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="/#top" aria-label="Casa Bloom home"><svg class="mono"><use href="#cb"/></svg><span>CASA BLOOM</span></a>
+      <ul class="links" id="links">
+        <li><a href="/#flowers">Flowers</a></li>
+        <li><a href="/#workshops">Workshops</a></li>
+        <li><a href="/#shop">Shop</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a class="cta" href="#contact">Say hello</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div><h2>Say hoi<span class="hand">for flowers, workshops or the shop</span></h2></div>
+        <div><h4>Write</h4><p><a href={`mailto:${site.email}`}>{site.email}</a></p></div>
+        <div><h4>Find</h4><p>{site.place}<br>{site.pickup}</p></div>
+        <div><h4>Follow</h4><p><a href={site.instagram} target="_blank" rel="noopener">Instagram</a></p></div>
+      </div>
+      <div class="foot__base">
+        <svg class="mono" viewBox="50 30 1100 1380" aria-hidden="true"><use href="#cb"/></svg>
+        <small>© {new Date().getFullYear()} Casa Bloom · city garden · 8002 Zürich</small>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+  (function(){
+    var nav=document.getElementById('nav'),btn=document.getElementById('menuBtn');
+    var always=nav.classList.contains('always-solid');
+    function onScroll(){nav.classList.toggle('is-solid',always||window.scrollY>window.innerHeight*0.6||nav.classList.contains('open'))}
+    window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+    function close(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menu';onScroll()}
+    btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(o));btn.textContent=o?'Close':'Menu';onScroll()});
+    document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',close)});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  })();
+  </script>
+</body>
+</html>

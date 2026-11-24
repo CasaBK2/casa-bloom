@@ -1,0 +1,148 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, intro, flowers, workshops, shop, garden, ticker } from '../data/content';
+const tickerText = ticker.join('  ✿  ') + '  ✿  ';
+---
+<Base>
+<main id="top">
+  <section class="hero" aria-label="Casa Bloom">
+    <div class="hero__media">
+      <img class="side" src="/img/img_2986.jpg" alt="A hand holding a dahlia and zinnia bouquet up against a blue sky" fetchpriority="high">
+      <video src="/img/meadow.mp4" poster="/img/meadow-poster.jpg" autoplay muted loop playsinline aria-label="Flower beds in the garden, swaying in the wind"></video>
+      <img class="side" src="/img/img_3956.jpg" alt="A bouquet of cream dahlias and zinnias">
+    </div>
+    <div class="hero__seal" aria-hidden="true">
+      <svg class="ring" viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ" textLength="287" lengthAdjust="spacing">{site.seal}</textPath></text></svg>
+      <svg class="m mono" viewBox="50 30 1100 1380"><use href="#cb"/></svg>
+    </div>
+    <div class="hero__word">
+      <h1 class="hero__title"><span>Casa</span><span><i>Bloom</i></span></h1>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      {[0, 1].map(() => <span set:html={tickerText.replaceAll('✿', '<b>✿</b>')} />)}
+    </div>
+  </div>
+
+  <section class="intro wrap" id="about">
+    <div class="intro__grid">
+      <div>
+        <div class="eyebrow">{intro.eyebrow}</div>
+        <p class="intro__lead" set:html={intro.lead} />
+        <p class="intro__body">{intro.body}</p>
+      </div>
+      <figure class="intro__photo">
+        <img src={`/img/${intro.photo.src}`} alt={intro.photo.alt} loading="lazy">
+        <span class="hand">{intro.note}</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="flowers wrap" id="flowers">
+    <div class="head">
+      <div>
+        <div class="eyebrow">{flowers.eyebrow}</div>
+        <h2 set:html={flowers.title} />
+      </div>
+      <p>{flowers.text}</p>
+    </div>
+    <div class="cards">
+      {flowers.items.map((f) => (
+        <article class="card">
+          <div class="card__img">
+            <img src={`/img/sm/${f.img}`} alt={f.alt} loading="lazy">
+            {f.tag && <span class:list={['tag', { 'tag--pink': f.tagPink }]}>{f.tag}</span>}
+          </div>
+          <div class="card__meta"><h3>{f.name}</h3><span>{f.price}</span></div>
+          <p>{f.note}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="workshops" id="workshops">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="eyebrow">{workshops.eyebrow}</div>
+          <h2 set:html={workshops.title} />
+        </div>
+        <p>{workshops.text}</p>
+      </div>
+      <div class="ws">
+        <div class="ws__photo"><img src={`/img/${workshops.photo.src}`} alt={workshops.photo.alt} loading="lazy"></div>
+        <div>
+          <div class="ws__list">
+            {workshops.items.map((w) => (
+              <div class="ws__item">
+                <div class="ws__date"><b>{w.day}</b><small>{w.month} · {w.weekday}</small></div>
+                <div><h3>{w.title}</h3><p>{w.time} · {w.price}</p></div>
+                <span class:list={['ws__spots', { low: w.spots > 0 && w.spots < 3 }]}>
+                  {w.spots === 0 ? 'Full' : w.spots === 1 ? '1 spot left' : w.spots < 3 ? `${w.spots} spots left` : `${w.spots} spots`}
+                </span>
+              </div>
+            ))}
+          </div>
+          <form class="form" id="signup" name="workshop-signup" method="POST" action="/danke/" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="workshop-signup">
+            <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+            <h3>Save me a spot <span class="hand">merci!</span></h3>
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-date">Workshop date</label>
+              <select id="f-date" name="workshop" required>
+                {workshops.items.filter((w) => w.spots > 0).map((w) => <option value={`${w.date} · ${w.title}`}>{w.date} · {w.title}</option>)}
+              </select></div>
+            <div class="field"><label for="f-people">Number of people</label>
+              <select id="f-people" name="people">{[1, 2, 3, 4].map((n) => <option>{n}</option>)}</select></div>
+            <div class="row">
+              <p class="note">I'll confirm by email with the address and how to pay. Nothing is charged here.</p>
+              <button class="btn btn--fill" type="submit">Sign me up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bags wrap" id="shop">
+    <div class="head">
+      <div>
+        <div class="eyebrow">{shop.eyebrow}</div>
+        <h2 set:html={shop.title} />
+      </div>
+      <p>{shop.text}</p>
+    </div>
+    <div class="bags__grid">
+      {shop.items.map((p) => (
+        <article class="bag">
+          {p.img
+            ? <div class="bag__img"><img src={`/img/sm/${p.img}`} alt={p.name} loading="lazy"></div>
+            : <div class:list={['bag__img', 'folk', `folk--${p.pattern}`]}><span class="folk__label">photo coming soon</span></div>}
+          <div class="bag__body">
+            <h3>{p.name}</h3><p>{p.note}</p>
+            <div class="bag__foot"><b>{p.price}</b><a href={`mailto:${site.email}?subject=${encodeURIComponent('Casa Bloom: ' + p.name)}`}>Ask about it →</a></div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="garden" id="garden">
+    <div class="wrap head" style="margin-bottom:0">
+      <div>
+        <div class="eyebrow">{site.instagramHandle}</div>
+        <h2>From <em>the garden</em></h2>
+      </div>
+      <a class="btn" href={site.instagram} target="_blank" rel="noopener">Follow on Instagram ↗</a>
+    </div>
+    <div class="grid">
+      {garden.map(([src, alt]) => (
+        <a href={site.instagram} target="_blank" rel="noopener"><img src={`/img/sm/${src}`} alt={alt} loading="lazy"></a>
+      ))}
+    </div>
+  </section>
+</main>
+</Base>
