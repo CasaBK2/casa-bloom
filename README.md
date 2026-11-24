@@ -19,6 +19,5 @@ in your inbox. Fields: name, email, workshop, people.
 Netlify builds with `npm run build` and publishes `dist/` (see `netlify.toml`).
 
 ## Still to fill in
-- Real email address and pick-up info (`src/data/content.ts`)
-- Real domain in `astro.config.mjs`
+- Pick-up info (`src/data/content.ts`)
 - Real bouquet names/prices, workshop dates, shop products

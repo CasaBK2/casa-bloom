@@ -7,7 +7,7 @@
 export const site = {
   name: 'Casa Bloom',
   seal: 'CASA BLOOM · CITY GARDEN · 8002 ZÜRICH · ',
-  email: 'hello@casabloom.ch', // TODO: real address
+  email: 'citygardenzh@gmail.com',
   instagram: 'https://www.instagram.com/casab_citygarden/',
   instagramHandle: '@casab_citygarden',
   place: 'City garden, 8002 Zürich',
