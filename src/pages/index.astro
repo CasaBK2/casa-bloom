@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import WaxSeal from '../components/WaxSeal.astro';
 import { site, intro, flowers, workshops, shop, garden } from '../data/content';
 ---
 <Base>
@@ -17,7 +18,9 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
   </section>
 
 
-  <section class="intro wrap" id="about">
+  <section class="band band--intro" id="about">
+  <svg class="bigb" viewBox="30 10 1140 1420" aria-hidden="true"><use href="#cb"/></svg>
+  <div class="intro wrap">
     <div class="intro__grid">
       <div>
         <p class="intro__lead" set:html={intro.lead} />
@@ -25,8 +28,10 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
       </div>
       <figure class="intro__photo">
         <img src={`/img/${intro.photo.src}`} alt={intro.photo.alt} loading="lazy">
+        <WaxSeal class="seal-on-photo seal-on-photo--bl" />
       </figure>
     </div>
+  </div>
   </section>
 
   <section class="flowers wrap" id="flowers">
@@ -51,7 +56,8 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
     </div>
   </section>
 
-  <section class="workshops" id="workshops">
+  <section class="workshops band" id="workshops">
+    <svg class="bigb bigb--left" viewBox="30 10 1140 1420" aria-hidden="true"><use href="#cb"/></svg>
     <div class="wrap">
       <div class="head">
         <div>
@@ -61,7 +67,7 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
         <p>{workshops.text}</p>
       </div>
       <div class="ws">
-        <div class="ws__photo"><img src={`/img/${workshops.photo.src}`} alt={workshops.photo.alt} loading="lazy"></div>
+        <div class="ws__photo"><img src={`/img/${workshops.photo.src}`} alt={workshops.photo.alt} loading="lazy"><WaxSeal class="seal-on-photo seal-on-photo--tr" /></div>
         <div>
           <div class="ws__list">
             {workshops.items.map((w) => (

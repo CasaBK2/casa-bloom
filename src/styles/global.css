@@ -217,3 +217,15 @@ h2 em,.foot h2 em,.workshops h2 em{color:inherit}
 .foot h4{color:var(--cream);opacity:.65}
 .foot__seal{color:var(--cream)}
 h2 em,.intro__lead em,.accent{font-family:inherit}
+
+/* ---------- The B as a graphic + the wax seal ---------- */
+.band{position:relative;overflow:hidden;isolation:isolate}
+.band > .wrap,.band > .intro{position:relative;z-index:1}
+.bigb{position:absolute;z-index:0;height:104%;width:auto;aspect-ratio:1140/1420;top:-10%;right:-10%;fill:var(--sage);opacity:.22;pointer-events:none}
+.bigb--left{right:auto;left:-18%;top:-8%;height:120%;fill:var(--forest);opacity:.12}
+@media (max-width:760px){.bigb{height:70%;top:auto;bottom:-6%;right:-30%}.bigb--left{height:60%;left:-35%;top:-4%}}
+.intro__photo,.ws__photo{position:relative}
+.seal-on-photo{position:absolute;width:clamp(84px,9vw,120px);height:auto;aspect-ratio:1}
+.seal-on-photo--bl{left:-26px;bottom:-22px;transform:rotate(-12deg)}
+.seal-on-photo--tr{right:-22px;top:-24px;transform:rotate(9deg)}
+@media (max-width:760px){.seal-on-photo--bl{left:-8px}.seal-on-photo--tr{right:-6px}}
