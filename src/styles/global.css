@@ -216,3 +216,4 @@ h2 em,.foot h2 em,.workshops h2 em{color:inherit}
 .ws__spots.low{background:var(--wax);color:var(--ink)}
 .foot h4{color:var(--cream);opacity:.65}
 .foot__seal{color:var(--cream)}
+h2 em,.intro__lead em,.accent{font-family:inherit}
