@@ -18,9 +18,6 @@ export const site = {
 
 export const intro = {
   lead: 'Casa Bloom is my city garden in the heart of Zürich, where I grow strictly seasonal flowers: cut in the morning, on your table by the afternoon.',
-  body: [
-    "The garden belonged to my grandparents and surrounds a house that is more than a hundred years old. It's my passion, and now I'd like to share it.",
-  ],
   photo: { src: 'img_0321_2.jpg', alt: 'A garden bouquet in a green glass vase on a sunny windowsill' },
 };
 

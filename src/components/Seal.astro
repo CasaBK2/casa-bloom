@@ -1,0 +1,11 @@
+---
+// Round seal: CB monogram with "CASA BLOOM · CITY GARDEN · 8002 ZÜRICH" around it.
+// Colour follows the CSS `color` of wherever it is placed.
+import { site } from '../data/content';
+interface Props { class?: string; id: string }
+const { class: cls, id } = Astro.props;
+---
+<div class:list={['seal', cls]} aria-hidden="true">
+  <svg class="ring" viewBox="0 0 120 120"><defs><path id={id} d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href={`#${id}`} textLength="287" lengthAdjust="spacing">{site.seal}</textPath></text></svg>
+  <svg class="m mono" viewBox="30 10 1140 1420"><use href="#cb"/></svg>
+</div>

@@ -2,6 +2,7 @@
 import '@fontsource-variable/jost';
 import '../styles/global.css';
 import MonogramDefs from '../components/MonogramDefs.astro';
+import Seal from '../components/Seal.astro';
 import { site } from '../data/content';
 
 interface Props { title?: string; description?: string; solidNav?: boolean }
@@ -36,7 +37,7 @@ const ogImage = Astro.site ? new URL('/img/og.jpg', Astro.site).href : '/img/og.
         <li><a href="/#workshops">Workshops</a></li>
         <li><a href="/#shop">Shop</a></li>
         <li><a href="/#about">About</a></li>
-        <li><a class="cta" href="#contact">Say hello</a></li>
+        <li><a class="cta" href={site.instagram} target="_blank" rel="noopener">Follow on Instagram</a></li>
       </ul>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
     </div>
@@ -54,10 +55,7 @@ const ogImage = Astro.site ? new URL('/img/og.jpg', Astro.site).href : '/img/og.
         <div><h4>Follow</h4><p><a href={site.instagram} target="_blank" rel="noopener">Instagram</a></p></div>
       </div>
       <div class="foot__base">
-        <div class="foot__seal" aria-hidden="true">
-          <svg class="ring" viewBox="0 0 120 120"><defs><path id="fcirc" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#fcirc" textLength="287" lengthAdjust="spacing">{site.seal}</textPath></text></svg>
-          <svg class="m mono" viewBox="30 10 1140 1420"><use href="#cb"/></svg>
-        </div>
+        <Seal class="foot__seal" id="seal-foot" />
         <small>© {new Date().getFullYear()} Casa Bloom · city garden · 8002 Zürich</small>
       </div>
     </div>
