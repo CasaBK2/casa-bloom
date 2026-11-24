@@ -80,19 +80,17 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
           <form class="form" id="signup" name="workshop-signup" method="POST" action="/danke/" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="workshop-signup">
             <p hidden><label>Leave this empty <input name="bot-field"></label></p>
-            <h3>Save me a spot</h3>
+            <h3>Ich bin dabei</h3>
             <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
             <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field"><label for="f-date">Workshop date</label>
+            <div class="field full"><label for="f-date">Workshop date</label>
               <select id="f-date" name="workshop" required>
                 {workshops.items.filter((w) => w.spots > 0).map((w) => <option value={`${w.date} · ${w.title}`}>{w.date} · {w.title}</option>)}
               </select></div>
             <div class="field"><label for="f-people">Number of people</label>
               <select id="f-people" name="people">{[1, 2, 3, 4].map((n) => <option>{n}</option>)}</select></div>
-            <div class="row">
-              <p class="note">I'll confirm by email with the address and how to pay. Nothing is charged here.</p>
-              <button class="btn btn--fill" type="submit">Sign me up</button>
-            </div>
+            <div class="field field--btn"><button class="btn btn--fill" type="submit">Sign me up</button></div>
+            <p class="note full">I'll confirm by email. Payment at the workshop, in cash or TWINT.</p>
           </form>
         </div>
       </div>

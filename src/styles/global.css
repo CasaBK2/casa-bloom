@@ -251,3 +251,11 @@ h2 em,.intro__lead em,.accent{font-family:inherit}
 @media (max-width:760px){.sticker{left:-6px;bottom:-18px}}
 .intro__grid{align-items:center}
 .intro__photo img{object-position:center top}
+/* Bloom Bar: photo matches the height of the list + form; tidy form grid */
+.ws{align-items:stretch}
+.ws__photo{height:100%}
+.ws__photo img{height:100%;aspect-ratio:auto;min-height:360px}
+@media (max-width:900px){.ws__photo{height:auto}.ws__photo img{height:auto;aspect-ratio:4/5;min-height:0}}
+.form .note{grid-column:1/-1;margin:0;max-width:none}
+.field--btn{justify-content:flex-end}
+.field--btn .btn{justify-content:center;width:100%;padding-block:12px;border-width:1.5px}
