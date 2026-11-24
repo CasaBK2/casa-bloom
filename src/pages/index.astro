@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, intro, flowers, workshops, shop, garden, ticker } from '../data/content';
-const tickerText = ticker.join('  ✿  ') + '  ✿  ';
+import { site, intro, flowers, workshops, shop, garden } from '../data/content';
 ---
 <Base>
 <main id="top">
@@ -11,31 +10,21 @@ const tickerText = ticker.join('  ✿  ') + '  ✿  ';
       <video src="/img/meadow.mp4" poster="/img/meadow-poster.jpg" autoplay muted loop playsinline aria-label="Flower beds in the garden, swaying in the wind"></video>
       <img class="side" src="/img/img_3956.jpg" alt="A bouquet of cream dahlias and zinnias">
     </div>
-    <div class="hero__seal" aria-hidden="true">
-      <svg class="ring" viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ" textLength="287" lengthAdjust="spacing">{site.seal}</textPath></text></svg>
-      <svg class="m mono" viewBox="50 30 1100 1380"><use href="#cb"/></svg>
-    </div>
-    <div class="hero__word">
-      <h1 class="hero__title"><span>Casa</span><span><i>Bloom</i></span></h1>
+    <div class="hero__logo">
+      <svg class="mono" viewBox="50 30 1100 1380" aria-hidden="true"><use href="#cb"/></svg>
+      <h1><span>CASA BLOOM</span></h1>
     </div>
   </section>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      {[0, 1].map(() => <span set:html={tickerText.replaceAll('✿', '<b>✿</b>')} />)}
-    </div>
-  </div>
 
   <section class="intro wrap" id="about">
     <div class="intro__grid">
       <div>
-        <div class="eyebrow">{intro.eyebrow}</div>
         <p class="intro__lead" set:html={intro.lead} />
-        <p class="intro__body">{intro.body}</p>
+        {intro.body.map((t) => <p class="intro__body">{t}</p>)}
       </div>
       <figure class="intro__photo">
         <img src={`/img/${intro.photo.src}`} alt={intro.photo.alt} loading="lazy">
-        <span class="hand">{intro.note}</span>
       </figure>
     </div>
   </section>
@@ -88,7 +77,7 @@ const tickerText = ticker.join('  ✿  ') + '  ✿  ';
           <form class="form" id="signup" name="workshop-signup" method="POST" action="/danke/" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="workshop-signup">
             <p hidden><label>Leave this empty <input name="bot-field"></label></p>
-            <h3>Save me a spot <span class="hand">merci!</span></h3>
+            <h3>Save me a spot</h3>
             <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
             <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
             <div class="field"><label for="f-date">Workshop date</label>
@@ -108,25 +97,15 @@ const tickerText = ticker.join('  ✿  ') + '  ✿  ';
   </section>
 
   <section class="bags wrap" id="shop">
-    <div class="head">
+    <div class="shop-soon">
       <div>
         <div class="eyebrow">{shop.eyebrow}</div>
         <h2 set:html={shop.title} />
       </div>
-      <p>{shop.text}</p>
-    </div>
-    <div class="bags__grid">
-      {shop.items.map((p) => (
-        <article class="bag">
-          {p.img
-            ? <div class="bag__img"><img src={`/img/sm/${p.img}`} alt={p.name} loading="lazy"></div>
-            : <div class:list={['bag__img', 'folk', `folk--${p.pattern}`]}><span class="folk__label">photo coming soon</span></div>}
-          <div class="bag__body">
-            <h3>{p.name}</h3><p>{p.note}</p>
-            <div class="bag__foot"><b>{p.price}</b><a href={`mailto:${site.email}?subject=${encodeURIComponent('Casa Bloom: ' + p.name)}`}>Ask about it →</a></div>
-          </div>
-        </article>
-      ))}
+      <div>
+        <p>{shop.text}</p>
+        <p style="margin-top:20px"><a class="btn" href={site.instagram} target="_blank" rel="noopener">Follow on Instagram ↗</a></p>
+      </div>
     </div>
   </section>
 
@@ -134,7 +113,7 @@ const tickerText = ticker.join('  ✿  ') + '  ✿  ';
     <div class="wrap head" style="margin-bottom:0">
       <div>
         <div class="eyebrow">{site.instagramHandle}</div>
-        <h2>From <em>the garden</em></h2>
+        <h2>In <em>season</em></h2>
       </div>
       <a class="btn" href={site.instagram} target="_blank" rel="noopener">Follow on Instagram ↗</a>
     </div>

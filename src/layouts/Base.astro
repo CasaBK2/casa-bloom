@@ -1,9 +1,6 @@
 ---
-import '@fontsource-variable/fraunces/full.css';
-import '@fontsource-variable/fraunces/full-italic.css';
-import '@fontsource-variable/inter';
-import '@fontsource/jost/500.css';
-import '@fontsource/caveat/700.css';
+import '@fontsource-variable/jost';
+import '@fontsource/unifrakturmaguntia';
 import '../styles/global.css';
 import MonogramDefs from '../components/MonogramDefs.astro';
 import { site } from '../data/content';
@@ -51,13 +48,16 @@ const ogImage = Astro.site ? new URL('/img/og.jpg', Astro.site).href : '/img/og.
   <footer class="foot" id="contact">
     <div class="wrap">
       <div class="foot__grid">
-        <div><h2>Say hoi<span class="hand">for flowers, workshops or the shop</span></h2></div>
+        <div><h2>Say <em>hello</em></h2></div>
         <div><h4>Write</h4><p><a href={`mailto:${site.email}`}>{site.email}</a></p></div>
         <div><h4>Find</h4><p>{site.place}<br>{site.pickup}</p></div>
         <div><h4>Follow</h4><p><a href={site.instagram} target="_blank" rel="noopener">Instagram</a></p></div>
       </div>
       <div class="foot__base">
-        <svg class="mono" viewBox="50 30 1100 1380" aria-hidden="true"><use href="#cb"/></svg>
+        <div class="foot__seal" aria-hidden="true">
+          <svg class="ring" viewBox="0 0 120 120"><defs><path id="fcirc" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#fcirc" textLength="287" lengthAdjust="spacing">{site.seal}</textPath></text></svg>
+          <svg class="m mono" viewBox="50 30 1100 1380"><use href="#cb"/></svg>
+        </div>
         <small>© {new Date().getFullYear()} Casa Bloom · city garden · 8002 Zürich</small>
       </div>
     </div>
