@@ -23,10 +23,10 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
     <div class="intro__grid">
       <div>
         <p class="intro__lead" set:html={intro.lead} />
-        <Seal class="intro__seal" id="seal-intro" />
       </div>
       <figure class="intro__photo">
         <img src={`/img/${intro.photo.src}`} alt={intro.photo.alt} loading="lazy">
+        <Seal class="sticker" id="seal-intro" />
       </figure>
     </div>
   </div>
