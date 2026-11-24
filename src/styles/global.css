@@ -203,3 +203,6 @@ h2 em{color:var(--pink)}
 .foot__seal .m{width:34%;height:auto}
 .hero__logo h1{white-space:nowrap}
 .intro__lead em{font-family:inherit;font-weight:500}
+/* hero logo: explicit size so the B never crops, and keep it clear of the top bar */
+.hero__logo{padding-top:72px}
+.hero__logo svg{width:auto;height:clamp(110px,min(18vw,24svh),220px);aspect-ratio:1140/1420;overflow:visible}

@@ -19,8 +19,7 @@ export const site = {
 export const intro = {
   lead: 'Casa Bloom is my city garden in the heart of Zürich, where I grow <em>strictly seasonal</em> flowers: cut in the morning, on your table by the afternoon.',
   body: [
-    'The garden belongs to a house that has stood in the middle of the city for more than a hundred years. It was my grandparents\' garden. When I took it over, flowers slowly took over too.',
-    'What started as a private passion is something I now want to share, one season at a time.',
+    "The garden belonged to my grandparents and surrounds a house that is more than a hundred years old. It's my passion, and now I'd like to share it.",
   ],
   photo: { src: 'img_0321_2.jpg', alt: 'A garden bouquet in a green glass vase on a sunny windowsill' },
 };
@@ -41,7 +40,7 @@ export const flowers = {
 // Bloom Bar workshops. spots: places left. Under 3 shows in red. Dates and prices are placeholders.
 export const workshops = {
   eyebrow: 'Workshops',
-  title: 'Bloom <em>Bar</em>',
+  title: 'Bloom Bar',
   text: 'Small groups in the garden, with flowers cut that morning. You go home with what you made.',
   photo: { src: 'img_3087.jpg', alt: 'Buckets of fresh cut flowers on a garden table with red chairs' },
   items: [
@@ -53,7 +52,7 @@ export const workshops = {
 
 export const shop = {
   eyebrow: 'Coming soon',
-  title: 'Garden goods, <em>in small batches</em>',
+  title: 'Garden goods, in small batches',
   text: 'Made in small batches from what grows in the garden. Follow along on Instagram to hear first.',
 };
 
