@@ -89,7 +89,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card__img img{aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .6s}
 .card:hover .card__img img{transform:scale(1.04)}
 .tag{position:absolute;top:12px;left:12px;background:var(--cream);color:var(--ink);font:600 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
-.tag--pink{background:var(--pink)}
 .card__meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
 .card__meta h3{font-family:var(--display);font-weight:500;font-size:22px;margin:0;line-height:1.1}
 .card__meta span{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px;white-space:nowrap}
@@ -133,9 +132,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .bag{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
 .bag__img{aspect-ratio:1;position:relative;overflow:hidden}
 .bag__img img{width:100%;height:100%;object-fit:cover}
-.folk{background-color:var(--pink);background-image:var(--folk);background-size:96px 96px}
-.folk--corn{background-color:var(--corn)}
-.folk--wax{background-color:var(--tomato)}
 .bag__body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
 .bag__body h3{margin:0;font-family:var(--display);font-weight:500;font-size:22px;line-height:1.1}
 .bag__body p{color:var(--muted);font-size:14px;flex:1}
@@ -169,8 +165,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .thanks-page{min-height:70vh;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:24px;padding-block:140px 96px}
 .thanks-page svg{width:64px;height:80px;color:var(--olive)}
 .thanks-page p{max-width:48ch;color:var(--muted)}
-.folk--pink{background-color:var(--pink)}
-.folk--tomato{background-color:var(--tomato)}
 .foot a{text-decoration-thickness:1px;text-underline-offset:3px}
 
 /* ---------- Round 2: one logo on the hero, two typefaces (Jost + blackletter accents) ---------- */
@@ -206,3 +200,19 @@ h2 em{color:var(--pink)}
 /* hero logo: explicit size so the B never crops, and keep it clear of the top bar */
 .hero__logo{padding-top:72px}
 .hero__logo svg{width:auto;height:clamp(110px,min(18vw,24svh),220px);aspect-ratio:1140/1420;overflow:visible}
+
+/* ---------- Round 3: one job per colour ----------
+   cream  = page background      ink    = all text
+   sage   = Bloom Bar band       forest = footer and logo
+   wax    = things you can click (buttons, "few spots left")
+   Pink, cornflower and tomato are kept for photos/print, not used on the page. */
+:focus-visible{outline-color:var(--ink)}
+.links a::after{background:currentColor}
+h2 em,.foot h2 em,.workshops h2 em{color:inherit}
+.btn--fill{background:var(--wax);color:var(--ink);border-color:var(--wax)}
+.btn--fill:hover{background:var(--forest);border-color:var(--forest);color:var(--cream)}
+.tag{background:var(--cream);color:var(--ink)}
+.ws__spots{background:var(--cream);color:var(--ink)}
+.ws__spots.low{background:var(--wax);color:var(--ink)}
+.foot h4{color:var(--cream);opacity:.65}
+.foot__seal{color:var(--cream)}
