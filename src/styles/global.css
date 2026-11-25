@@ -290,3 +290,9 @@ h2::first-letter{color:var(--pop-text)}
 .intro__lead .pop{color:var(--pop-text)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .intro__lead .pop{color:var(--pop)}}
 :root[data-theme="dark"] .intro__lead .pop{color:var(--pop)}
+
+/* Logo lockup: the B's vertical line sits over the L of BLOOM.
+   Shift = (L stem offset from word centre: .953em) - (line offset from B centre: .1451 x B height) */
+.hero__logo{--wf:clamp(26px,5vw,68px);--bh:clamp(110px,min(18vw,24svh),220px)}
+.hero__logo span{font-size:var(--wf)}
+.hero__logo svg{height:var(--bh);transform:translateX(calc(.953 * var(--wf) - .1451 * var(--bh)))}
