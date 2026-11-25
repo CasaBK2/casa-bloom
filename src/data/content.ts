@@ -17,7 +17,7 @@ export const site = {
 };
 
 export const intro = {
-  lead: 'Casa Bloom is my city garden in the heart of Zürich, where I grow strictly seasonal flowers: cut in the morning, on your table by the afternoon.',
+  lead: '<span class="pop">Casa Bloom</span> is my city garden in the heart of Zürich, where I grow strictly seasonal flowers: cut in the morning, on your table by the afternoon.',
   photo: { src: 'about.jpg', alt: 'A garden bouquet in a green glass vase on a sunny windowsill' },
 };
 
