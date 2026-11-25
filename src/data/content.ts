@@ -49,8 +49,8 @@ export const workshops = {
 
 export const shop = {
   eyebrow: 'Coming soon',
-  title: 'Garden goods, in small batches',
-  text: 'Made in small batches from what grows in the garden. Follow along on Instagram to hear first.',
+  title: 'Garden goods',
+  text: 'Made in small batches from what grows in the garden.',
 };
 
 // The square photo grid above the footer.
