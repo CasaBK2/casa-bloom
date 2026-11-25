@@ -259,3 +259,5 @@ h2 em,.intro__lead em,.accent{font-family:inherit}
 .form .note{grid-column:1/-1;margin:0;max-width:none}
 .field--btn{justify-content:flex-end}
 .field--btn .btn{justify-content:center;width:100%;padding-block:12px;border-width:1.5px}
+/* Gothic initial: the first letter of every heading, same colour as the heading */
+h2::first-letter{font-family:var(--black);font-weight:400;font-size:1.12em;letter-spacing:.01em}
