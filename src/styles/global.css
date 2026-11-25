@@ -276,7 +276,7 @@ h2{line-height:1.15}
 :root{--pop:var(--wax);--pop-on:var(--ink);--pop-text:#C9A92C}
 /* summer: --pop:var(--pink);--pop-on:var(--cream);--pop-text:var(--pink) */
 /* autumn: --pop:var(--tomato);--pop-on:var(--cream);--pop-text:var(--tomato) */
-.sticker{background:var(--pop);color:var(--pop-on);transform:rotate(-9deg)}
+.sticker{background:var(--pink);color:var(--cream);transform:rotate(-9deg)} /* the sticker stays pink all year */
 h2::first-letter{color:var(--pop-text)}
 .workshops h2::first-letter,.foot h2::first-letter{color:var(--pop)}
 .ws__spots.low{background:var(--pop);color:var(--pop-on)}
