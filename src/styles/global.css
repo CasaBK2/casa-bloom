@@ -269,9 +269,16 @@ h2{line-height:1.15}
 .foot__grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:640px){.foot__grid{grid-template-columns:1fr}}
 
 /* ── Seasonal pop: one colour per season, always in the same spots ──
-   spring = cornflower, summer = pink, autumn = tomato. Change --pop only. */
-:root{--pop:var(--corn)}
-.sticker{background:var(--pop);color:var(--cream);transform:rotate(-9deg)}
-h2::first-letter{color:var(--pop)}
-.ws__spots.low{background:var(--pop);color:var(--cream)}
-.btn--fill:hover{background:var(--pop);border-color:var(--pop);color:var(--cream)}
+   spring = wax yellow, summer = pink, autumn = tomato.
+   --pop      the fill colour (sticker, buttons, "spots left")
+   --pop-on   text on top of the fill
+   --pop-text the colour when used as text on cream (first letters) */
+:root{--pop:var(--wax);--pop-on:var(--ink);--pop-text:#C9A92C}
+/* summer: --pop:var(--pink);--pop-on:var(--cream);--pop-text:var(--pink) */
+/* autumn: --pop:var(--tomato);--pop-on:var(--cream);--pop-text:var(--tomato) */
+.sticker{background:var(--pop);color:var(--pop-on);transform:rotate(-9deg)}
+h2::first-letter{color:var(--pop-text)}
+.workshops h2::first-letter,.foot h2::first-letter{color:var(--pop)}
+.ws__spots.low{background:var(--pop);color:var(--pop-on)}
+.btn--fill,.links .cta{background:var(--pop);border-color:var(--pop);color:var(--pop-on)}
+.btn--fill:hover,.links .cta:hover{background:var(--forest);border-color:var(--forest);color:var(--cream)}
