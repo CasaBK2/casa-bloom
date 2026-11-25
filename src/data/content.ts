@@ -18,7 +18,7 @@ export const site = {
 
 export const intro = {
   lead: 'Casa Bloom is my city garden in the heart of Zürich, where I grow strictly seasonal flowers: cut in the morning, on your table by the afternoon.',
-  photo: { src: 'about.jpg', alt: 'A garden bouquet in a green glass vase on a sunny windowsill' },
+  photo: { src: 'about-spring.jpg', alt: 'Pink peonies in the garden beside the table and chairs, the house behind' },
 };
 
 // "Fresh from the garden". tag is optional (e.g. '2 left'). Prices are placeholders.
@@ -27,10 +27,10 @@ export const flowers = {
   title: 'Fresh from the garden',
   text: 'Strictly seasonal cut flowers and whatever grows in the garden. Pick up at [location to come] or bespoke delivery in Zürich.',
   items: [
-    { name: 'Seasonal bouquet', price: 'CHF 35', note: 'What the garden gives this week', img: 'img_1459.jpg', alt: 'Dahlias, snapdragons and campanula in a white footed vase' },
-    { name: 'Garden jar', price: 'CHF 45', note: 'A fuller bunch, ready in its vase', img: 'img_2167.jpg', alt: 'A pastel bouquet in a pink patterned vase' },
-    { name: 'Bespoke', price: 'On request', note: 'Events, gifts and long tables', img: 'img_1156.jpg', alt: 'A soft pink bouquet in a silver bucket' },
-    { name: 'Weekly flowers', price: 'CHF 120 / mo', note: 'A bunch every week, in season', img: 'img_3397.jpg', alt: 'A loose bouquet in a glass jar on wooden stairs', tag: 'Subscription' },
+    { name: 'Seasonal bouquet', price: 'CHF 35', note: 'What the garden gives this week', img: 'img_9350.jpg', alt: 'A hand holding a bouquet of bleeding hearts, bluebells and roses' },
+    { name: 'Garden jar', price: 'CHF 45', note: 'A fuller bunch, ready in its vase', img: 'img_9020.jpg', alt: 'White tulips and bluebells in a silver jar on a garden chair' },
+    { name: 'Bespoke', price: 'On request', note: 'Events, gifts and long tables', img: 'img_9899.jpg', alt: 'A full bouquet of pink peonies, burgundy roses and alliums' },
+    { name: 'Weekly flowers', price: 'CHF 120 / mo', note: 'A bunch every week, in season', img: 'img_0749.jpg', alt: 'A hand holding two white peonies in the garden', tag: 'Subscription' },
   ],
 };
 
@@ -39,7 +39,7 @@ export const workshops = {
   eyebrow: 'Workshops',
   title: 'Bloom Bar',
   text: 'Small groups in the garden, with flowers cut that morning. You go home with what you made.',
-  photo: { src: 'img_3087.jpg', alt: 'Buckets of fresh cut flowers on a garden table with red chairs' },
+  photo: { src: 'img_9034.jpg', alt: 'Holding a silver jar of white peonies, lily tulips and bluebells' },
   items: [
     { day: '14', month: 'Jun', weekday: 'Sa', date: 'Sa 14 June', title: 'Kenzan arrangement', time: '10:00 to 12:30', price: 'CHF 95', spots: 2 },
     { day: '12', month: 'Jul', weekday: 'Sa', date: 'Sa 12 July', title: 'Seasonal bouquet', time: '10:00 to 12:30', price: 'CHF 85', spots: 6 },
@@ -55,16 +55,16 @@ export const shop = {
 
 // The square photo grid above the footer.
 export const garden = [
-  ['img_2430.jpg', 'White and pink cosmos'],
-  ['img_0925.jpg', 'Peach snapdragons in evening light'],
-  ['img_2980.jpg', 'An armful of magenta cosmos'],
-  ['img_0450.jpg', 'Irises in a garden border'],
-  ['img_3007.jpg', 'Cream dahlias in the beds'],
-  ['img_9821.jpg', 'Pink peonies by the garden table'],
-  ['img_2788.jpg', 'An island flower bed in the lawn'],
-  ['img_3083.jpg', 'A white cosmos against the sun'],
-  ['img_2304.jpg', 'Dark dahlias and wild carrot in a bucket'],
-  ['img_0862.jpg', 'The garden path under an arch'],
-  ['img_2728.jpg', 'Raised beds with nasturtiums'],
-  ['img_0331.jpg', 'The wax seal on a bouquet'],
+  ['img_9261.jpg', 'Pink tulips and forget-me-nots'],
+  ['img_9297.jpg', 'White lily tulips'],
+  ['img_8855.jpg', 'Snowflakes among forget-me-nots'],
+  ['img_9822.jpg', 'Pink peonies by the house'],
+  ['img_8022.jpg', 'Hellebores in early spring'],
+  ['img_9790.jpg', 'Peonies and alliums in the border'],
+  ['img_0301.jpg', 'The house and the garden in morning sun'],
+  ['img_9782.jpg', 'The peony bed'],
+  ['img_0444.jpg', 'Irises in the garden'],
+  ['img_9788.jpg', 'Peonies by the garden path'],
+  ['img_0035.jpg', 'Peonies and alliums'],
+  ['img_9784.jpg', 'White and pink peonies'],
 ];
