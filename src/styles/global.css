@@ -269,9 +269,9 @@ h2{line-height:1.15}
 .foot__grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:640px){.foot__grid{grid-template-columns:1fr}}
 
 /* ── Seasonal pop: one colour per season, always in the same spots ──
-   spring = pink, summer = cornflower, autumn = tomato. Change --pop only. */
-:root{--pop:var(--pink)}
-.sticker{background:var(--pop);color:var(--cream)}
+   spring = cornflower, summer = pink, autumn = tomato. Change --pop only. */
+:root{--pop:var(--corn)}
+.sticker{background:var(--pop);color:var(--cream);transform:rotate(-9deg)}
 h2::first-letter{color:var(--pop)}
 .ws__spots.low{background:var(--pop);color:var(--cream)}
 .btn--fill:hover{background:var(--pop);border-color:var(--pop);color:var(--cream)}
