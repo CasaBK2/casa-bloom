@@ -247,7 +247,7 @@ h2 em,.intro__lead em,.accent{font-family:inherit}
 .seal .m{width:36%;height:auto;fill:currentColor}
 .intro__seal{width:clamp(120px,12vw,150px);color:var(--forest);margin-top:36px}
 .intro__photo{position:relative}
-.sticker{position:absolute;left:-30px;bottom:-26px;width:clamp(104px,10vw,132px);background:var(--cream);color:var(--forest);border-radius:50%;box-shadow:0 6px 18px rgba(47,49,32,.25);transform:rotate(-12deg)}
+.sticker{position:absolute;left:-30px;bottom:-26px;width:clamp(104px,10vw,132px);background:var(--cream);color:var(--forest);border-radius:50%;box-shadow:0 6px 18px rgba(47,49,32,.25)}
 @media (max-width:760px){.sticker{left:-6px;bottom:-18px}}
 .intro__grid{align-items:center}
 .intro__photo img{object-position:center top}
