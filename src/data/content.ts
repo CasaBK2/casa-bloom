@@ -18,7 +18,7 @@ export const site = {
 
 export const intro = {
   lead: '<span class="pop">Casa Bloom</span> is my city garden in the heart of Zürich, where I grow strictly seasonal flowers: cut in the morning, on your table by the afternoon.',
-  photo: { src: 'about-spring.jpg', alt: 'Pink peonies in the garden beside the table and chairs, the house behind' },
+  photo: { src: 'about-fall.jpg', alt: 'Dahlias in full bloom in the garden beds' },
 };
 
 // "Fresh from the garden". tag is optional (e.g. '2 left'). Prices are placeholders.
@@ -27,10 +27,10 @@ export const flowers = {
   title: 'Fresh from the garden',
   text: 'Strictly seasonal cut flowers and whatever grows in the garden. Pick up at [location to come] or bespoke delivery in Zürich.',
   items: [
-    { name: 'Seasonal bouquet', price: 'CHF 35', note: 'What the garden gives this week', img: 'img_9350.jpg', alt: 'A hand holding a bouquet of bleeding hearts, bluebells and roses' },
-    { name: 'Garden jar', price: 'CHF 45', note: 'A fuller bunch, ready in its vase', img: 'img_9020.jpg', alt: 'White tulips and bluebells in a silver jar on a garden chair' },
-    { name: 'Bespoke', price: 'On request', note: 'Events, gifts and long tables', img: 'img_9899.jpg', alt: 'A full bouquet of pink peonies, burgundy roses and alliums' },
-    { name: 'Weekly flowers', price: 'CHF 120 / mo', note: 'A bunch every week, in season', img: 'img_0749.jpg', alt: 'A hand holding two white peonies in the garden', tag: 'Subscription' },
+    { name: 'Seasonal bouquet', price: 'CHF 35', note: 'What the garden gives this week', img: 'img_2212.jpg', alt: 'An armful of zinnias, cosmos and marigolds' },
+    { name: 'Garden jar', price: 'CHF 45', note: 'A fuller bunch, ready in its vase', img: 'img_5893_2.jpg', alt: 'Dahlias and cosmos in a zinc bucket on a garden table' },
+    { name: 'Bespoke', price: 'On request', note: 'Events, gifts and long tables', img: 'img_3665.jpg', alt: 'A big bouquet of dahlias and sunflowers on the garden table' },
+    { name: 'Weekly flowers', price: 'CHF 120 / mo', note: 'A bunch every week, in season', img: 'img_4770.jpg', alt: 'A bouquet of dahlias and zinnias laid on the ground', tag: 'Subscription' },
   ],
 };
 
@@ -39,7 +39,7 @@ export const workshops = {
   eyebrow: 'Workshops',
   title: 'Bloom Bar',
   text: 'Small groups in the garden, with flowers cut that morning. You go home with what you made.',
-  photo: { src: 'img_9034.jpg', alt: 'Holding a silver jar of white peonies, lily tulips and bluebells' },
+  photo: { src: 'img_3661.jpg', alt: 'A zinc bucket of late-summer flowers on the workshop table' },
   items: [
     { day: '14', month: 'Jun', weekday: 'Sa', date: 'Sa 14 June', title: 'Kenzan arrangement', time: '10:00 to 12:30', price: 'CHF 95', spots: 2 },
     { day: '12', month: 'Jul', weekday: 'Sa', date: 'Sa 12 July', title: 'Seasonal bouquet', time: '10:00 to 12:30', price: 'CHF 85', spots: 6 },
@@ -55,16 +55,16 @@ export const shop = {
 
 // The square photo grid above the footer.
 export const garden = [
-  ['img_9261.jpg', 'Pink tulips and forget-me-nots'],
-  ['img_9297.jpg', 'White lily tulips'],
-  ['img_8855.jpg', 'Snowflakes among forget-me-nots'],
-  ['img_9822.jpg', 'Pink peonies by the house'],
-  ['img_8022.jpg', 'Hellebores in early spring'],
-  ['img_9790.jpg', 'Peonies and alliums in the border'],
-  ['img_0301.jpg', 'The house and the garden in morning sun'],
-  ['img_9782.jpg', 'The peony bed'],
-  ['img_0444.jpg', 'Irises in the garden'],
-  ['img_9788.jpg', 'Peonies by the garden path'],
-  ['img_0035.jpg', 'Peonies and alliums'],
-  ['img_9784.jpg', 'White and pink peonies'],
+  ['img_4245.jpg', 'A peach cactus dahlia'],
+  ['img_3977.jpg', 'A pink ball dahlia held up in the garden'],
+  ['img_2215.jpg', 'Zinnias, cosmos and marigolds from above'],
+  ['img_5690.jpg', 'Magenta cosmos'],
+  ['img_3632.jpg', 'Orange lilies and yellow roses'],
+  ['img_2965.jpg', 'A handful of zinnias and cosmos'],
+  ['img_3869.jpg', 'A dark dahlia bush in the lawn'],
+  ['img_4543.jpg', 'Cutting a fresh bunch in the beds'],
+  ['img_3129.jpg', 'Dahlias and cosmos on a white table'],
+  ['img_2213.jpg', 'The morning cut, laid out on the ground'],
+  ['img_3984.jpg', 'Dahlias among the tall beds'],
+  ['img_2391_2.jpg', 'The garden in late summer'],
 ];

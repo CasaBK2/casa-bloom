@@ -273,7 +273,7 @@ h2{line-height:1.15}
    --pop      the fill colour (sticker, buttons, "spots left")
    --pop-on   text on top of the fill
    --pop-text the colour when used as text on cream (first letters) */
-:root{--pop:var(--wax);--pop-on:var(--ink);--pop-text:#C9A92C}
+:root{--pop:var(--tomato);--pop-on:var(--cream);--pop-text:var(--tomato)}
 /* summer: --pop:var(--pink);--pop-on:var(--cream);--pop-text:var(--pink) */
 /* autumn: --pop:var(--tomato);--pop-on:var(--cream);--pop-text:var(--tomato) */
 .sticker{background:var(--cream);color:var(--forest);transform:rotate(-9deg)} /* the sticker stays cream all year */
