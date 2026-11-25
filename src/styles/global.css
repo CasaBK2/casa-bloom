@@ -259,3 +259,5 @@ h2 em,.intro__lead em,.accent{font-family:inherit}
 .form .note{grid-column:1/-1;margin:0;max-width:none}
 .field--btn{justify-content:flex-end}
 .field--btn .btn{justify-content:center;width:100%;padding-block:12px;border-width:1.5px}
+/* Gothic accent: one place only, in pink */
+.flowers h2 em{font-family:var(--black);font-style:normal;font-weight:400;letter-spacing:0;color:var(--pink)}

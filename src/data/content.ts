@@ -24,7 +24,7 @@ export const intro = {
 // "Fresh from the garden". tag is optional (e.g. '2 left'). Prices are placeholders.
 export const flowers = {
   eyebrow: 'Flowers',
-  title: 'Fresh from the garden',
+  title: 'Fresh from <em>the garden</em>',
   text: 'Strictly seasonal cut flowers and whatever grows in the garden. Pick up at [location to come] or bespoke delivery in Zürich.',
   items: [
     { name: 'Seasonal bouquet', price: 'CHF 35', note: 'What the garden gives this week', img: 'img_1459.jpg', alt: 'Dahlias, snapdragons and campanula in a white footed vase' },
