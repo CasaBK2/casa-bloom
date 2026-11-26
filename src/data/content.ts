@@ -36,15 +36,14 @@ export const flowers = {
 
 // Bloom Bar workshops. spots: places left. Under 3 shows in red. Dates and prices are placeholders.
 export const workshops = {
-  eyebrow: 'Workshops',
+  eyebrow: 'Workshops · coming 2027',
   title: 'Bloom Bar',
   text: 'In small groups, we find inspiration in the seasonal garden, cut flowers together and make a bouquet or Kenzan arrangement to take home.',
   photo: { src: 'img_3087.jpg', alt: 'Buckets of fresh cut flowers on a garden table with red chairs' },
-  items: [
-    { day: '14', month: 'Jun', weekday: 'Sa', date: 'Sa 14 June', title: 'Kenzan arrangement', time: '10:00 to 12:30', price: 'CHF 95', spots: 2 },
-    { day: '12', month: 'Jul', weekday: 'Sa', date: 'Sa 12 July', title: 'Seasonal bouquet', time: '10:00 to 12:30', price: 'CHF 85', spots: 6 },
-    { day: '23', month: 'Aug', weekday: 'Sa', date: 'Sa 23 August', title: 'Kenzan arrangement', time: '14:00 to 16:30', price: 'CHF 95', spots: 8 },
-  ],
+  notify: {
+    title: 'Be the first to know',
+    text: "Leave your email and I'll let you know when the first dates are out.",
+  },
 };
 
 export const shop = {

@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Seal from '../components/Seal.astro';
-import { site, intro, flowers, workshops, shop, garden } from '../data/content';
+import { site, intro, flowers, workshops, garden } from '../data/content';
 ---
 <Base>
 <main id="top">
@@ -66,52 +66,21 @@ import { site, intro, flowers, workshops, shop, garden } from '../data/content';
       </div>
       <div class="ws">
         <div class="ws__photo"><img src={`/img/${workshops.photo.src}`} alt={workshops.photo.alt} loading="lazy"></div>
-        <div>
-          <div class="ws__list">
-            {workshops.items.map((w) => (
-              <div class="ws__item">
-                <div class="ws__date"><b>{w.day}</b><small>{w.month} · {w.weekday}</small></div>
-                <div><h3>{w.title}</h3><p>{w.time} · {w.price}</p></div>
-                <span class:list={['ws__spots', { low: w.spots > 0 && w.spots < 3 }]}>
-                  {w.spots === 0 ? 'Full' : w.spots === 1 ? '1 spot left' : w.spots < 3 ? `${w.spots} spots left` : `${w.spots} spots`}
-                </span>
-              </div>
-            ))}
-          </div>
-          <form class="form" id="signup" name="workshop-signup" method="POST" action="/danke/" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="workshop-signup">
+        <div class="ws__notify">
+          <form class="form" id="signup" name="workshop-notify" method="POST" action="/danke/" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="workshop-notify">
             <p hidden><label>Leave this empty <input name="bot-field"></label></p>
-            <h3>Ich bin debi</h3>
-            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field full"><label for="f-date">Workshop date</label>
-              <select id="f-date" name="workshop" required>
-                {workshops.items.filter((w) => w.spots > 0).map((w) => <option value={`${w.date} · ${w.title}`}>{w.date} · {w.title}</option>)}
-              </select></div>
-            <div class="field"><label for="f-people">Number of people</label>
-              <select id="f-people" name="people">{[1, 2, 3, 4].map((n) => <option>{n}</option>)}</select></div>
-            <div class="field field--btn"><button class="btn btn--fill" type="submit">Sign me up</button></div>
-            <p class="note full">I'll confirm by email. Payment at the workshop, in cash or TWINT.</p>
+            <h3>{workshops.notify.title}</h3>
+            <p class="note full">{workshops.notify.text}</p>
+            <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field field--btn full"><button class="btn btn--fill" type="submit">Notify me</button></div>
+            <p class="note full or">or <a href={site.instagram} target="_blank" rel="noopener">follow on Instagram</a> for news and weekly drops</p>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="band band--shop" id="shop">
-    <svg class="bigb bigb--shop" viewBox="30 10 1140 1420" aria-hidden="true"><use href="#cb"/></svg>
-    <div class="bags wrap">
-    <div class="shop-soon">
-      <div>
-        <div class="eyebrow">{shop.eyebrow}</div>
-        <h2 set:html={shop.title} />
-      </div>
-      <div>
-        <p>{shop.text}</p>
-      </div>
-    </div>
-    </div>
-  </section>
 
   <section class="garden" id="garden">
     <div class="wrap head" style="margin-bottom:0">
