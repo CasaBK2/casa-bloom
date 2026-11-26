@@ -56,7 +56,7 @@ export const shop = {
 export const garden = [
   ['img_2215.jpg', 'Zinnias, cosmos and marigolds from the morning cut'],
   ['img_2725.jpg', 'The garden and the house in summer'],
-  ['img_3083.jpg', 'A white cosmos against the sun'],
+  ['img_4245.jpg', 'Peach cactus dahlias in the beds'],
   ['img_2431.jpg', 'Yellow and pink zinnias'],
   ['img_1429.jpg', 'A pastel arrangement in a white urn on the garden table'],
 ];
