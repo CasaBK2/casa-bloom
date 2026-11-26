@@ -8,8 +8,8 @@ export const site = {
   name: 'Casa Bloom',
   seal: 'CASA BLOOM · CITY GARDEN · 8002 ZÜRICH · ',
   email: 'hoi@casabloom.ch',
-  instagram: 'https://www.instagram.com/casab_citygarden/',
-  instagramHandle: '@casab_citygarden',
+  instagram: 'https://www.instagram.com/casabloom_citygarden/',
+  instagramHandle: '@casabloom_citygarden',
   place: 'City garden, 8002 Zürich',
   pickup: 'Pick-up in Enge',
   description:
