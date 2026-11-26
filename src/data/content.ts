@@ -28,8 +28,7 @@ export const flowers = {
   text: 'Strictly seasonal cut flowers combined with whatever grows in the garden. Follow on Instagram for weekly drops and pick up in Enge, or contact me for bespoke velo delivery in Zürich.',
   items: [
     { name: 'Seasonal Strüssli', price: 'CHF 20–30', note: 'What the garden gives this week', img: 'img_4335.jpg', alt: 'A hand-tied bouquet of peach dahlias and cosmos held over the lawn' },
-    { name: 'Garden jar', price: 'CHF 45', note: 'A fuller bunch, ready in its vase', img: 'img_2167.jpg', alt: 'A pastel bouquet in a pink patterned vase' },
-    { name: 'Bespoke', price: 'On request', note: 'Events, gifts and long tables', img: 'img_1156.jpg', alt: 'A soft pink bouquet in a silver bucket' },
+    { name: 'Garden bucket', price: 'On request', note: 'A bucket of seasonal flowers to arrange for your event', img: 'img_1156.jpg', alt: 'Soft pink garden flowers in a silver bucket' },
     { name: 'Cut your own', price: 'By appointment', note: 'Come by, cut and arrange in the garden', img: 'img_4543.jpg', alt: 'Cutting a fresh bunch among the garden beds' },
   ],
 };
