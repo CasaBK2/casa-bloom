@@ -314,3 +314,19 @@ h2::first-letter{color:var(--pop-text)}
 .mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .mosaic a:hover img{transform:scale(1.04)}
 @media (max-width:640px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Bloom Bar (coming 2027): photo left, all text + notify card right */
+.workshops{padding-block:clamp(56px,7vw,104px)}
+.ws{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
+.ws__photo{height:auto}
+.ws__photo img{height:auto;aspect-ratio:4/5;min-height:0;max-height:640px}
+.ws__side .eyebrow{margin-bottom:18px}
+.ws__side h2{margin:0}
+.ws__intro{margin:18px 0 28px;max-width:46ch;color:#3d4028}
+.ws__notify{display:block}
+@media (max-width:900px){.ws{grid-template-columns:1fr}.ws__side{order:-1}}
+
+/* Footer: slimmer, wordmark instead of the stamp */
+.foot{padding-block:clamp(44px,5vw,72px) 24px}
+.foot__base{margin-top:clamp(32px,4vw,48px);align-items:center}
+.foot__word{font-family:var(--geo);font-weight:500;font-size:15px;letter-spacing:.34em}
