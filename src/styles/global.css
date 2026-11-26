@@ -331,8 +331,5 @@ h2::first-letter{color:var(--pop-text)}
 .foot__base{margin-top:clamp(32px,4vw,48px);align-items:center}
 .foot__word{font-family:var(--geo);font-weight:500;font-size:15px;letter-spacing:.34em}
 
-/* Intro: longer story text, Swiss German line on its own */
+/* Intro: longer story text */
 .intro__lead{font-size:clamp(1.45rem,2.6vw,2.3rem)}
-.intro__lead .ch{display:block;margin-top:.8em;font-size:.62em;font-style:italic;letter-spacing:0;color:var(--pop-text)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .intro__lead .ch{color:var(--pop)}}
-:root[data-theme="dark"] .intro__lead .ch{color:var(--pop)}

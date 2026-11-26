@@ -17,7 +17,7 @@ export const site = {
 };
 
 export const intro = {
-  lead: '<span class="pop">Casa Bloom</span> is my city garden oasis in the heart of Zürich. A 100-year-old family garden where I found my passion for flowers and now grow strictly seasonal cut flowers to share with you.<span class="ch">Frisch gschnitte am Morge, am Nami bi dir ufm Tisch.</span>',
+  lead: '<span class="pop">Casa Bloom</span> is my city garden oasis in the heart of Zürich. A 100-year-old family garden where I found my passion for flowers and now grow strictly seasonal cut flowers to share with you: Frisch gschnitte am Morge, am Nami bi dir ufm Tisch.',
   photo: { src: 'about.jpg', alt: 'A garden bouquet in a green glass vase on a sunny windowsill' },
 };
 
