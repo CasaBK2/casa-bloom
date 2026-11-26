@@ -10,7 +10,7 @@ export const site = {
   email: 'citygardenzh@gmail.com',
   instagram: 'https://www.instagram.com/casab_citygarden/',
   instagramHandle: '@casab_citygarden',
-  place: 'City garden, 8002 Zürich',
+  place: 'Brandschenkestrasse 172, 8002 Zürich',
   pickup: 'Pick-up in Enge',
   description:
     'Strictly seasonal cut flowers from a city garden in the heart of Zürich. Bouquets, bespoke delivery and Bloom Bar workshops.',
@@ -55,8 +55,8 @@ export const shop = {
 // The "In season" mosaic: the first photo is shown large, the next four small.
 export const garden = [
   ['img_2215.jpg', 'Zinnias, cosmos and marigolds from the morning cut'],
-  ['img_4245.jpg', 'A peach cactus dahlia'],
-  ['img_3977.jpg', 'A pink ball dahlia held up in the garden'],
-  ['img_2998.jpg', 'Dahlias in full bloom in the beds'],
-  ['img_5690.jpg', 'Magenta cosmos'],
+  ['img_2725.jpg', 'The garden and the house in summer'],
+  ['img_3083.jpg', 'A white cosmos against the sun'],
+  ['img_2431.jpg', 'Yellow and pink zinnias'],
+  ['img_1429.jpg', 'A pastel arrangement in a white urn on the garden table'],
 ];
