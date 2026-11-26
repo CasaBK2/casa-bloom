@@ -340,3 +340,5 @@ h2::first-letter{color:var(--pop-text)}
 .legal p{line-height:1.6}.legal a{color:inherit}
 .legal__date{margin-top:48px;opacity:.6;font-size:14px}
 .foot__base small a{color:inherit}
+/* Nav links: stop section headings sliding under the fixed nav */
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 96px)}
