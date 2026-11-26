@@ -304,3 +304,13 @@ h2::first-letter{color:var(--pop-text)}
 .ws__notify .note.or{margin-top:4px}
 .ws__notify .note.or a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .garden{padding-top:clamp(56px,8vw,110px)}
+
+/* In season: one large photo and four small ones */
+.garden{padding-bottom:clamp(56px,8vw,110px)}
+.garden .wrap.head{padding-bottom:clamp(24px,3vw,36px)}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.2vw,14px)}
+.mosaic a{display:block;overflow:hidden;border-radius:4px;aspect-ratio:1}
+.mosaic a:first-child{grid-column:span 2;grid-row:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.mosaic a:hover img{transform:scale(1.04)}
+@media (max-width:640px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}

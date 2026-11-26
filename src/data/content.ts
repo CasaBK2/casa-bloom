@@ -52,18 +52,11 @@ export const shop = {
   text: 'Made in small batches from what grows in the garden.',
 };
 
-// The square photo grid above the footer.
+// The "In season" mosaic: the first photo is shown large, the next four small.
 export const garden = [
-  ['img_2430.jpg', 'White and pink cosmos'],
-  ['img_0925.jpg', 'Peach snapdragons in evening light'],
-  ['img_2980.jpg', 'An armful of magenta cosmos'],
-  ['img_0450.jpg', 'Irises in a garden border'],
-  ['img_3007.jpg', 'Cream dahlias in the beds'],
-  ['img_9821.jpg', 'Pink peonies by the garden table'],
-  ['img_2788.jpg', 'An island flower bed in the lawn'],
-  ['img_3083.jpg', 'A white cosmos against the sun'],
-  ['img_2304.jpg', 'Dark dahlias and wild carrot in a bucket'],
-  ['img_0862.jpg', 'The garden path under an arch'],
-  ['img_2728.jpg', 'Raised beds with nasturtiums'],
-  ['img_0331.jpg', 'The wax seal on a bouquet'],
+  ['img_2215.jpg', 'Zinnias, cosmos and marigolds from the morning cut'],
+  ['img_4245.jpg', 'A peach cactus dahlia'],
+  ['img_3977.jpg', 'A pink ball dahlia held up in the garden'],
+  ['img_2998.jpg', 'Dahlias in full bloom in the beds'],
+  ['img_5690.jpg', 'Magenta cosmos'],
 ];
