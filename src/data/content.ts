@@ -38,7 +38,7 @@ export const flowers = {
 export const workshops = {
   eyebrow: 'Workshops',
   title: 'Bloom Bar',
-  text: 'Small groups in the garden, with flowers cut that morning. You go home with what you made.',
+  text: 'In small groups, we find inspiration in the seasonal garden, cut flowers together and make a bouquet or Kenzan arrangement to take home.',
   photo: { src: 'img_3087.jpg', alt: 'Buckets of fresh cut flowers on a garden table with red chairs' },
   items: [
     { day: '14', month: 'Jun', weekday: 'Sa', date: 'Sa 14 June', title: 'Kenzan arrangement', time: '10:00 to 12:30', price: 'CHF 95', spots: 2 },
