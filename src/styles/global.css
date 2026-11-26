@@ -333,3 +333,10 @@ h2::first-letter{color:var(--pop-text)}
 
 /* Intro: longer story text */
 .intro__lead{font-size:clamp(1.45rem,2.6vw,2.3rem)}
+/* Impressum & privacy */
+.legal{padding-block:140px 96px;max-width:68ch}
+.legal h2{margin-bottom:20px}.legal h2:not(:first-child){margin-top:64px}
+.legal h3{font:600 13px var(--body);letter-spacing:.12em;text-transform:uppercase;margin:32px 0 8px}
+.legal p{line-height:1.6}.legal a{color:inherit}
+.legal__date{margin-top:48px;opacity:.6;font-size:14px}
+.foot__base small a{color:inherit}

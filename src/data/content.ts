@@ -13,7 +13,7 @@ export const site = {
   place: 'Brandschenkestrasse 172, 8002 Zürich',
   pickup: 'Pick-up in Enge',
   description:
-    'Strictly seasonal cut flowers from a city garden in the heart of Zürich. Bouquets, bespoke delivery and Bloom Bar workshops.',
+    'Strictly seasonal cut flowers from a 100-year-old city garden in Zürich. Seasonal Strüssli, garden buckets for events, cut your own, and Bloom Bar workshops coming 2027.',
 };
 
 export const intro = {
