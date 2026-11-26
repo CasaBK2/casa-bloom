@@ -11,7 +11,7 @@ export const site = {
   instagram: 'https://www.instagram.com/casab_citygarden/',
   instagramHandle: '@casab_citygarden',
   place: 'City garden, 8002 Zürich',
-  pickup: 'Pick-up at [location to come]', // TODO
+  pickup: 'Pick-up in Enge',
   description:
     'Strictly seasonal cut flowers from a city garden in the heart of Zürich. Bouquets, bespoke delivery and Bloom Bar workshops.',
 };
@@ -25,7 +25,7 @@ export const intro = {
 export const flowers = {
   eyebrow: 'Flowers',
   title: 'Fresh from the garden',
-  text: 'Strictly seasonal cut flowers and whatever grows in the garden. Pick up at [location to come] or bespoke delivery in Zürich.',
+  text: 'Strictly seasonal cut flowers combined with whatever grows in the garden. Follow on Instagram for weekly drops and pick up in Enge, or contact me for bespoke velo delivery in Zürich.',
   items: [
     { name: 'Seasonal bouquet', price: 'CHF 35', note: 'What the garden gives this week', img: 'img_1459.jpg', alt: 'Dahlias, snapdragons and campanula in a white footed vase' },
     { name: 'Garden jar', price: 'CHF 45', note: 'A fuller bunch, ready in its vase', img: 'img_2167.jpg', alt: 'A pastel bouquet in a pink patterned vase' },
